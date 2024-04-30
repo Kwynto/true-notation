@@ -66,8 +66,9 @@ Description of the notation for entities in the GoLang code.
 
 |Private|Public|Description|Example|
 |:-|:-|:-|:-|
-|f|F|for file descriptors|``` fOutput, _ := os.OpenFile(sName, os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666) ```|
-|mx|Mx|mutex and other blocking|``` var mxSystemBlock sync.RWMutex ```|
+|f|F|For file descriptors|``` fOutput, _ := os.OpenFile(sName, os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666) ```|
+|mx|Mx|Mutex and other blocking|``` var mxSystemBlock sync.RWMutex ```|
+|em|Em|Embedded data blocks|``` var emUiStaticDir embed.FS ```|
 |j|J|Encoded JSON in string|``` jText, _ := json.Marshal(&stMyRecord) ```|
 |bs|Bs|Encoded base64 in string|``` bsText := base64.StdEncoding.EncodeToString(bData) ```|
 
