@@ -22,7 +22,7 @@ Description of the notation for entities in the GoLang code.
 
 ## Basic data types
 
-|Private|Public|Description|Example|
+|Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
 |b|B|byte|``` var bText byte ```|
 |r|R|rune|``` var rChar rune ```|
@@ -39,7 +39,7 @@ Description of the notation for entities in the GoLang code.
 
 ## Aggregate and other complex data types
 
-|Private|Public|Description|Example|
+|Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
 |st|St|struct|``` var stName TUser = TUser{} ```|
 |in|In|interface|``` var inAny = interface{} ```|
@@ -49,13 +49,13 @@ Description of the notation for entities in the GoLang code.
 
 ## Naming types
 
-|Private|Public|Description|Example|
+|Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
 |t|T|for custom type|``` type TUser struct{} ```|
 
 ## Code entities with a special purpose
 
-|Private|Public|Description|Example|
+|Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
 |g|G|Global variables|``` var gConfig TConfig ```|
 |cl|Cl|Closure variables|``` var clCount int = 0```|
@@ -64,17 +64,22 @@ Description of the notation for entities in the GoLang code.
 
 ## Entities with a frequently used purpose
 
-|Private|Public|Description|Example|
+|Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
 |f|F|For file descriptors|``` fOutput, _ := os.OpenFile(sName, os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666) ```|
+|io|Io|Types for data input and output|``` var IoFile *os.File ```|
 |mx|Mx|Mutex and other blocking|``` var mxSystemBlock sync.RWMutex ```|
 |em|Em|Embedded data blocks|``` var emUiStaticDir embed.FS ```|
+|err|Err|Errors|``` errRead := error.New("reading error") ```|
+|ctx|Ctx|Sending cancellation signals|``` ctxBase := context.Background() ```|
 |j|J|Encoded JSON in string|``` jText, _ := json.Marshal(&stMyRecord) ```|
+|je|Je|*json.Encoder|``` jeEncoder := json.NewEncoder(f) ```|
+|jd|Jd|*json.Decoder|``` jdDecoder := json.NewDecoder(f) ```|
 |bs|Bs|Encoded base64 in string|``` bsText := base64.StdEncoding.EncodeToString(bData) ```|
 
 ## A combination of prefixes
 
-|Private|Public|Description|Example|
+|Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
 |slS|SlS|slice of string|``` var slSNames []string{} ```|
 |slU|SlU|slice of uint|``` var slUNumbers []uint{} ```|
