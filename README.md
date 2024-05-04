@@ -20,8 +20,13 @@ Description of the notation for entities in the GoLang code.
 - Constants can be named in a different style, to make them more different from ordinary entities. 
 - The fields of the structure do not need to be formatted, but it is possible to use prefixes, since the insides of the structure should be understandable by themselves. 
 - Prefixes in the names of functions and methods should be used as necessary, but without fanaticism, and preferably not at all. An example of reasonable usage: IsError(), IsStored(). 
+- Both prefixes and postfixes can be used in naming variables and other entities. 
 
-## Basic data types
+## The prefixes
+
+Prefixes are placed at the beginning of the entity name and indicate its type or purpose.
+
+### Basic data types
 
 |Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
@@ -38,7 +43,7 @@ Description of the notation for entities in the GoLang code.
 |p|P|pointer| |
 |r|R|reference|``` rNow := &dtNow ```|
 
-## Aggregate and other complex data types
+### Aggregate and other complex data types
 
 |Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
@@ -48,13 +53,13 @@ Description of the notation for entities in the GoLang code.
 |ar|Ar|array|``` var arNums = [4]int{0, 1, 2, 3} ```|
 |m|M|map|``` var mUsers = map[string]TUser ```|
 
-## Naming types
+### Naming types
 
 |Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
 |t|T|for custom type|``` type TUser struct{} ```|
 
-## Code entities with a special purpose
+### Code entities with a special purpose
 
 |Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
@@ -63,7 +68,7 @@ Description of the notation for entities in the GoLang code.
 |fn|Fn|Variables for storing functions and other higher-order operations|``` fnFilter := func(data uint) bool {return data/2 == 0} ```|
 |d|D|The difference between the values (delta)|``` dInterval := dtSecond.Sub(dtFirst) ```|
 
-## Entities with a frequently used purpose
+### Entities with a frequently used purpose
 
 |Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
@@ -80,7 +85,7 @@ Description of the notation for entities in the GoLang code.
 |jd|Jd|*json.Decoder|``` jdDecoder := json.NewDecoder(f) ```|
 |bs|Bs|Encoded base64 in string|``` bsText := base64.StdEncoding.EncodeToString(bData) ```|
 
-## A combination of prefixes
+### A combination of prefixes
 
 |Private|Public|Description|Example|
 |:-|:-|:-|:-|
@@ -93,6 +98,20 @@ Description of the notation for entities in the GoLang code.
 
 ***Note:***  
 *You can use any prefix combination order that is convenient for you or that is provided for by the code design agreement in your team.*  
+
+## The postfixes
+
+- The postfixes are at the end of the name of a variable or other entity and show the specifics of using this entity. 
+- Postfixes always start with a capital letter. 
+
+|Postfix|Description|
+|:-|:-|
+|In|Input values.|
+|Out|Output values.|
+|It|The value of the iteration.|
+|Ind|An index in an array or slice.|
+|Key|An aggregate type key, for example, a key in a hash table.|
+|Val|An aggregate type value, such as the value in a hash table.|
 
 ## About the author
 
