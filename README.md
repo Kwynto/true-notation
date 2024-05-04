@@ -1,5 +1,6 @@
-# go-notation
-Description of the notation for entities in the GoLang code.
+# True notation
+Description of the notation for entities in the code.  
+The main purpose is to be used in the GoLang code.  
 
 ***Note:***  
 *This naming system is not a standard.*  
