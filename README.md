@@ -19,6 +19,7 @@ Description of the notation for entities in the GoLang code.
 - Each new word or part of the prefix in the name must begin with a capital letter. 
 - Constants can be named in a different style, to make them more different from ordinary entities. 
 - The fields of the structure do not need to be formatted, but it is possible to use prefixes, since the insides of the structure should be understandable by themselves. 
+- Prefixes in the names of functions and methods should be used as necessary, but without fanaticism, and preferably not at all. An example of reasonable usage: IsError(), IsStored(). 
 
 ## Basic data types
 
@@ -66,9 +67,11 @@ Description of the notation for entities in the GoLang code.
 
 |Private|Public or combined|Description|Example|
 |:-|:-|:-|:-|
-|f|F|For file descriptors|``` fOutput, _ := os.OpenFile(sName, os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666) ```|
+|f|F|For file descriptors|``` fOutput, _ := os.OpenFile(sName, os.O_CREATE, 0666) ```|
 |io|Io|Types for data input and output|``` var IoFile *os.File ```|
 |mx|Mx|Mutex and other blocking|``` var mxSystemBlock sync.RWMutex ```|
+|at|At|Atomic|``` var atOperation atomic.Value ```|
+|buf|Buf|Any buffer| |
 |em|Em|Embedded data blocks|``` var emUiStaticDir embed.FS ```|
 |err|Err|Errors|``` errRead := error.New("reading error") ```|
 |ctx|Ctx|Sending cancellation signals|``` ctxBase := context.Background() ```|
@@ -79,7 +82,7 @@ Description of the notation for entities in the GoLang code.
 
 ## A combination of prefixes
 
-|Private|Public or combined|Description|Example|
+|Private|Public|Description|Example|
 |:-|:-|:-|:-|
 |slS|SlS|slice of string|``` var slSNames []string{} ```|
 |slU|SlU|slice of uint|``` var slUNumbers []uint{} ```|
