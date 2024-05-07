@@ -85,6 +85,8 @@ Prefixes are placed at the beginning of the entity name and indicate its type or
 |je|Je|*json.Encoder|``` jeEncoder := json.NewEncoder(f) ```|
 |jd|Jd|*json.Decoder|``` jdDecoder := json.NewDecoder(f) ```|
 |bs|Bs|Encoded base64 in string|``` bsText := base64.StdEncoding.EncodeToString(bData) ```|
+|ch|Ch|Channels|``` var chStopSignal = make(chan struct{}, 1) ```|
+|label| |Labels in the code|``` labelCheck: ```|
 
 ### A combination of prefixes
 
