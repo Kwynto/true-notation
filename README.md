@@ -2,14 +2,17 @@
 Description of the notation for entities in the code.  
 The main purpose is to be used in the GoLang code.  
 
+***Information:***  
+The name stands for "The really universal entity notation".  
+
 ***Note:***  
-*This naming system is not a standard.*  
-*This system is a kind of Hungarian notation and is convenient for its author, but you can also use it if you want.*  
-*This notation makes the code more readable, which means it simplifies application development.*  
-*The use of this notation is solely your choice.*  
+This naming system is not a standard.  
+This system is a kind of Hungarian notation and is convenient for its author, but you can also use it if you want.  
+This notation makes the code more readable, which means it simplifies application development.  
+The use of this notation is solely your choice.  
 
 ***Warning:***  
-*Using this notation in the early stages requires self-discipline from the developer.*  
+Using this notation in the early stages requires self-discipline from the developer.  
 
 ## Application
 
