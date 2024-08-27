@@ -44,8 +44,7 @@ Prefixes are placed at the beginning of the entity name and indicate its type or
 |bi|Bi|BigInt|``` biNumber := new(big.Int) ```|
 |is|Is|bool|``` var isOk bool ```|
 |dt|Dt|Date and time|``` dtNow := time.Now() ```|
-|p|P|pointer| |
-|r|R|reference|``` rNow := &dtNow ```|
+|p|P|pointer|``` pNow := &dtNow ```|
 
 ### Aggregate and other complex data types
 
